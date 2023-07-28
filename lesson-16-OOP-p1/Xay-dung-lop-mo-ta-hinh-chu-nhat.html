@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<input style="width: 200px" id="widthRec" placeholder="Nhập chiều rộng hình chữ nhật">
+<input style="width: 200px" id= "lengthRec" placeholder="Nhập chiều dài hình chữ nhật">
+<button onclick="runFunction()">Tính diện tích và chu vi</button>
+<br><br>
+<canvas id="myCanvas" width="1000px" height="300px" style="border: 1px solid #d3d3d3;"></canvas>
+<p id="result"></p>
+
+<script>
+  function runFunction() {
+      let width = +document.getElementById("widthRec").value;
+      let length = +document.getElementById("lengthRec").value;
+      let c = document.getElementById("myCanvas");
+      let ctx = c.getContext("2d");
+      ctx.clearRect(0,0,1000,300)
+      ctx.fillStyle = "red";
+      ctx.fillRect(400, 100, width, length);
+      let Rectangle = function (width1,length1) {
+          this.width = width1;
+          this.length = length1;
+          this.getWidth = function () {
+              return this.width
+          }
+          this.getLength = function () {
+              return this.length
+          }
+          this.peremeter = function (a,b) {
+              return (a+b)*2
+          }
+          this.area = function (a,b) {
+              return a*b
+          }
+      }
+      let newRectangle = new Rectangle(width,length)
+      let newWidth = newRectangle.getWidth()
+      let newLength = newRectangle.getLength()
+      let perimeterRec = newRectangle.peremeter(newWidth,newLength)
+      let areaRec = newRectangle.area(newWidth,newLength)
+      document.getElementById("result").innerHTML = `Diện tích: ${areaRec}cm<sup>2</sup> <br> Chu vi: ${perimeterRec}cm`
+  }
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

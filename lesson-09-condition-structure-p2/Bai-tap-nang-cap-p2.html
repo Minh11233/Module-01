@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập nâng cao phần 2</title>
+</head>
+<body>
+<!--Bài 1-->
+<h3>Bài 1: Chuyển từ độ C sang độ F.</h3>
+<input id="tempC" type="number" placeholder="Nhập độ C">
+<button type="button" onclick="changeTemp()">Chuyển đổi</button>
+<p id="result"></p>
+
+<!--Bài 2-->
+<h3>Bài 2: Chuyển từ mét sang feet:</h3>
+<input id="meter" type="number" placeholder="Nhập đơn vị m">
+<button type="button" onclick="changeLengthUnit()">Chuyển đổi</button>
+<p id="result2"></p>
+
+<!--Bài 3-->
+<h3>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</h3>
+<input id="edge" type="number" placeholder="Nhập đơn vị m">
+<button type="button" onclick="areaSquare()">Bắt đầu tính diện tích</button>
+<p id="result3"></p>
+
+<!--Bài 4-->
+<h3>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</h3>
+<input id="chieudai" type="number" style="width: 200px" placeholder="Nhập chiều dài hình chữ nhật">
+<input id="chieurong" type="number" style="width: 200px" placeholder="Nhập chiều rộng hình chữ nhật">
+<button type="button" onclick="dtHinhchunhat()">Bắt đầu tính diện tích</button>
+<p id="result4"></p>
+
+<!--Bài 5-->
+<h3>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h3>
+<input id="canhke-a" type="number" placeholder="Nhập cạnh kề a">
+<input id="canhke-b" type="number" placeholder="Nhập cạnh kề b">
+<button type="button" onclick="dttgvuong()">Bắt đầu tính diện tích</button>
+<p id="result5"></p>
+
+<!--Bài 6-->
+<h3>Bài 6: Giải phương trình bậc 1.</h3>
+<p>Phương trình bậc 1 dạng ax + b = 0 </p>
+<input id="so-a" type="number" placeholder="Nhập số a">
+<input id="so-b" type="number" placeholder="Nhập số b">
+<button type="button" onclick="ptBac1()">Bắt đầu giải</button>
+<p id="result6"></p>
+
+<!--Bài 7-->
+<h3>Bài 7: Giải phương trình bậc 2.</h3>
+<p>Phương trình bậc 2 có dạng ax2+bx+c=0 (a≠0)</p>
+<input id="so-a1" type="number" placeholder="Nhập số a">
+<input id="so-b1" type="number" placeholder="Nhập số b">
+<input id="so-c1" type="number" placeholder="Nhập số c">
+<button type="button" onclick="ptBac2()">Bắt đầu giải</button>
+<p id="result7"></p>
+
+<!--Bài 8-->
+<h3>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</h3>
+<input id="age" type="number" placeholder="Nhập tuổi">
+<button type="button" onclick="checkAge()">Kiểm tra</button>
+<p id="result8"></p>
+
+<!--Bài 9-->
+<h3>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:</h3>
+<input id="canh-a" type="number" placeholder="Nhập cạnh tam giác">
+<input id="canh-b" type="number" placeholder="Nhập cạnh tam giác">
+<input id="canh-c" type="number" placeholder="Nhập cạnh tam giác">
+<button type="button" onclick="checkTriagle()">Kiểm tra</button>
+<p id="result9"></p>
+
+<!--Bài 10-->
+<h3>Bài 10: Viết chương trình tính giá điện.</h3>
+<input type="number" id="kWh" type="number" placeholder="Nhập số kilo Wát (kWh)">
+<button type="button" onclick="checkGiadien()">Kiểm tra</button>
+<p id="result10"></p>
+
+<!--Bài 11-->
+<h3>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h3>
+<input id="income" type="number" style="width: 250px" placeholder="Nhập thu nhập tính thuế của bạn">
+<button type="button" onclick="checkThueTNCN()">Kiểm tra</button>
+<p id="result11"></p>
+
+<!--Bài 12-->
+<h3>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</h3>
+
+<script src="Bai-tap-nang-cao-p2.js"></script>
+</body>
+</html>

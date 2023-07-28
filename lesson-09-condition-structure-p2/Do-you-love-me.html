@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung vui</title>
+</head>
+<body>
+<h1>Do you love me?</h1>
+<button onclick="alert('Me too')">Yes</button>
+<button style="position: absolute" id="btnNo" onmouseover="jump()">No</button>
+<script>
+  function jump() {
+    let x = Math.round(Math.random() * window.innerWidth);
+    let y = Math.round(Math.random() * window.innerHeight);
+    document.getElementById("btnNo").style.left = x + 'px';
+    document.getElementById("btnNo").style.top = y + 'px';
+  //   Math.random() sẽ nhảy 1 số bât kì dưới 1
+  }
+</script>
+</body>
+</html>

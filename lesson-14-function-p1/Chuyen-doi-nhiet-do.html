@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+
+<!--Cách 1:-->
+<h3>Tempature Converted (Cách 1)</h3>
+<p>Type a value in the Fahrenheit field to convert the value to Celcius</p>
+Fahrenheit: <input id="inputF" type="number" placeholder="Fahrenheit" oninput="ChangeTemp()"> <br>
+<p id="result"></p>
+<br><br>
+
+
+
+<!--Cách 2:-->
+<h3>Tempature Converted (Cách 2)</h3>
+<form>
+    <p>
+        <label>Fahrenheit:</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+               oninput="temperatureConverter(this.value)"
+               onchange="temperatureConverter(this.value)">
+        // oninput sự kiện xảy ra ngay khi gõ vào ô input;
+        // onchange sụ kiện xảy ra khi có sự thay đổi trong ô input
+    </p>
+    <p>Celsius: <span id="outputCelsius"></span></p>
+</form>
+
+<script>
+    function ChangeTemp() {
+        let temC;
+        let temF = document.getElementById("inputF").value;
+        temC = (temF - 32)/1.8
+        document.getElementById("result").innerHTML = `Celius: ${temC} ${"<sup>o</sup>"}C`
+    }
+    <!--Cách 2:-->
+    function temperatureConverter(valNum) {
+        temF = parseFloat(valNum);
+        document.getElementById("outputCelsius").innerHTML = (temF-32) / 1.8;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Sử dụng các hàm có sẵn của mảng </title>
+</head>
+<body>
+<h3>Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa. </h3>
+<input id="inputText" type="text">
+<button onclick="swapCaseType()">SWAP</button>
+<p id="result"></p>
+<script>
+function swapCaseType(){
+    let input = document.getElementById("inputText").value;
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let arr = []
+
+    for (i = 0; i < input.length; i++) {
+        if(UPPER.indexOf(input[i]) !== -1) { // hàm indexOf  trả về -1 tức là hàm indexOf k tìm ra phần tử trong mảng
+            arr.push(input[i].toLowerCase())
+        } else if (LOWER.indexOf(input[i]) !== -1) {
+            arr.push(input[i].toUpperCase())
+
+        } else {
+            arr.push(input[i])
+        }
+    } document.getElementById("result").innerHTML = arr.join();
+}
+</script>
+</body>
+</html>

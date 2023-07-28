@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zz</title>
+</head>
+<body>
+<script>
+    //Sử dụng while
+  let table;
+  let i = 1;
+  let j = 1;
+  table = "<table border='1', border-collapse='collapse' width='300'>"
+  while (i <= 10) {
+    table = table + "<tr>";
+    while (j <= 10) {
+      table = table + "<td>" + i * j + "</td>";
+      j++;
+    }
+    table = table + "</tr>";
+    j = 1 // Đặt lại giá trị cho j nếu không vòng lặp bên trong sẽ không chạy
+    i++;
+  }
+  table = table + "</table>";
+  document.write(table);
+
+    //Sử dụng FOR
+  let table2;
+  table2 = "<table border='1', border-collapse='collapse' width='300'>"
+  for (i2 = 1; i2 <=10; i2++) {
+      table2 += "<tr>"
+      for (j2 = 1; j2 <= 10; j2++) {
+          table2 += "<td>" + i2 * j2 + "</td>";
+      }
+      table2 += "</tr>"
+  }
+  table2 += "</table2>"
+    document.write(table2);
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caro Game Simple</title>
+</head>
+<body>
+<button onclick="put0()">Đánh O</button>
+<button onclick="putX()">Đánh X</button>
+<p id="result"></p>
+<script>
+    let table = [];
+    let output = "";
+    for (i = 0; i < 10; i++) {
+        table[i] = [];
+        for (j = 0; j < 10; j++) {
+            table[i][j] = "*"
+            output += table[i][j] + "&nbsp&nbsp&nbsp&nbsp&nbsp";
+        }
+        output += "<br>"
+    }
+    document.getElementById("result").innerHTML = output;
+
+    function put0(){
+        let X = +prompt("Nhập dòng bạn muốn thay đổi")
+        let Y = +prompt("Nhập vị trí ở dòng bạn muốn thay đổi")
+        let output = ""
+
+        table[X-1][Y-1] = '0'
+        for (i = 0; i < 10; i++) {
+            for (j = 0; j < 10; j++) {
+                output += table[i][j] + "&nbsp&nbsp&nbsp&nbsp&nbsp";
+            }
+            output += "<br>"
+        }
+        document.getElementById("result").innerHTML = output;
+        init ()
+    }
+    function putX(){
+        let X = +prompt("Nhập dòng bạn muốn thay đổi");
+        let Y = +prompt("Nhập vị trí ở dòng bạn muốn thay đổi");
+        let output = "";
+
+        table[X-1][Y-1] = 'X'
+        for (i = 0; i < 10; i++) {
+            for (j = 0; j < 10; j++) {
+                output += table[i][j] + "&nbsp&nbsp&nbsp&nbsp&nbsp";
+            }
+            output += "<br>"
+        }
+        document.getElementById("result").innerHTML = output;
+        init ()
+    }
+    function init () {
+        for(i = 0; i < 10; i++){
+            for (let j = 0; j < 10; j++){
+                if (table[i][j] === 'X' && table[i][j+1] === 'X' && table[i][j+2] === 'X' ||
+                    table[i][j] === 'X' && table[i+1][j] === 'X' && table[i+2][j] === 'X'){
+                    alert("X Thắng");
+                }else if(table[i][j] === '0' && table[i][j+1] === '0' && table[i][j+2] === '0' ||
+                    table[i][j] === '0' && table[i+1][j] === '0' && table[i+2][j] === '0'){
+                    alert("0 Thắng");
+                }
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>

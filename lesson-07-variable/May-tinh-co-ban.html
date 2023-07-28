@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh co ban</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<table>
+  <tr>
+    <td><input type="number" id="giatri1" placeholder="Nhap so"></td>
+    <td><input type="number" id="giatri2" placeholder="Nhap so"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><button onclick="phepCong()">Addition(+)</button></td>
+    <td><button onclick="phepTru()">Subtraction(-)</button></td>
+    <td><button onclick="phepNhan()">Multiplication(x)</button></td>
+    <td><button onclick="phepChia()">Division(:)</button></td>
+  </tr>
+</table>
+<p>Result:</p>
+<p id="ketQua"></p>
+<script>
+function phepCong() {
+let giatri1 = document.getElementById("giatri1").value;
+let giatri2 = document.getElementById("giatri2").value;
+let ketqua = parseInt(giatri1) + parseInt(giatri2);
+document.getElementById("ketQua").innerHTML = ketqua;
+}
+function phepTru() {
+  let giatri1 = document.getElementById("giatri1").value;
+  let giatri2 = document.getElementById("giatri2").value;
+  let ketqua = Number(giatri1)-Number(giatri2);
+  document.getElementById("ketQua").innerHTML = ketqua;
+}
+function phepNhan() {
+  let giatri1 = document.getElementById("giatri1").value;
+  let giatri2 = document.getElementById("giatri2").value;
+  let ketqua = Number(giatri1)*Number(giatri2);
+  document.getElementById("ketQua").innerHTML = ketqua;
+}
+function phepChia() {
+  let giatri1 = document.getElementById("giatri1").value;
+  let giatri2 = document.getElementById("giatri2").value;
+  let ketqua = Number(giatri1)/Number(giatri2);
+  document.getElementById("ketQua").innerHTML = ketqua;
+}
+</script>
+</body>
+</html>

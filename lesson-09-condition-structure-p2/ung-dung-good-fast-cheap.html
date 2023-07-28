@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng good-fast-cheap</title>
+</head>
+<body>
+<input onclick="btnGood()" id="good" type="range" max="2" min="1"> Good <br>
+<input onclick="btnFast()" id="fast" type="range" max="2" min="1"> Fast <br>
+<input onclick="btnCheap()" id="cheap" type="range" max="2" min="1"> Cheap <br>
+<script>
+    let good = document.getElementById("good");
+    console.log(good);
+    let fast = document.getElementById("fast");
+    let cheap = document.getElementById("cheap");
+    function btnGood() {
+        if (good.value == 2 && fast.value == 2) {
+            cheap.value = 1;
+        }
+    }
+    function btnFast() {
+        if (cheap.value == 2 && fast.value == 2) {
+            good.value = 1;
+        }
+    }
+
+    function btnCheap() {
+        if (cheap.value == 2 && good.value == 2) {
+            fast.value = 1;
+        }
+    }
+
+</script>
+</body>
+</html>

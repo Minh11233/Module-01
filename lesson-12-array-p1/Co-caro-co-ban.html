@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo bàn cờ caro đơn giản</title>
+</head>
+<body>
+<h3>CARO GAME SIMPLE</h3>
+<button onclick="changeX()">Nhập X</button>
+<button onclick="changeY()">Nhập 0</button>
+<p id="carogame"></p>
+<script>
+let board = [];
+let data = "";
+    for (let i = 0; i < 5; i++) {
+        board[i] = [".",".",".",".","."]; // tạo mảng 2 chiều
+    } console.log(board)
+    for (let x = 0; x < 5; x++) {
+        for (let y = 0; y < 5; y++ ) {
+            data += board[x][y] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+        }
+        data += "<br>";
+    }
+            document.getElementById("carogame").innerHTML = data;
+    function changeX() {
+        let positionX = +prompt("Nhập toạ độ hàng ngang");
+        let positionY = +prompt("Nhập toạ độ hàng dọc");
+        data = "";
+        board[positionX-1][positionY-1] = "x";
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++ ) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+            data += "<br>";
+            document.getElementById("carogame").innerHTML = data;
+    }
+    }
+    function changeY() {
+        let positionX = +prompt("Nhập toạ độ hàng ngang");
+        let positionY = +prompt("Nhập toạ độ hàng dọc");
+     data = "";
+     board[positionX-1][positionY-1] = "0";
+      for (let i = 0; i < 5; i++) {
+           for (let j = 0; j < 5; j++ ) {
+               data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+            data += "<br>";
+            document.getElementById("carogame").innerHTML = data;
+        }
+    }
+
+
+</script>
+</body>
+</html>

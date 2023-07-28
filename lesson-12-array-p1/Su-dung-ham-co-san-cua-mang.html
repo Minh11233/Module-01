@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+<!--Bài 2-->
+<input id="num" type="number" placeholder="Vui lòng nhập số">
+<button onclick="join()">Click here</button>
+<p id="result"></p>
+<script>
+  // Bài 1
+  myColor = ["Red", "Green", "White", "Black"];
+
+  let link = myColor.join();
+  document.write(link);
+
+  //Bài 2
+function join() {
+  let num = document.getElementById("num").value;
+  let arr = [num[0]];
+  for (i = 1; i < num.length; i++) {
+    if (num[i-1] % 2 == 0  && num[i] % 2 == 0) {
+        arr.push("-",num[i])
+    } else {
+        arr.push(num[i])
+    }
+  }
+  document.getElementById("result").innerHTML = arr.join("");
+  }
+
+</script>
+</body>
+</html>

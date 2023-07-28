@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập vòng lặp 01</title>
+</head>
+</style>
+<body>
+<!--Bài 1-->
+<h3>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</h3>
+<button type="button" onclick="startCount()">Tiến hành đếm</button>
+
+<!--Bài 2-->
+<h3>Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.</h3>
+<button type="button" onclick="checkTemp()">Kiểm tra nhiệt độ</button>
+<p id="result"></p>
+
+<!--Bài 3-->
+<h3>Bài 3: Hiển thị ra n số trong dãy fibonacci đầu tiên.</h3>
+<input id="Fibo" style="width: 210px" placeholder="Số số lượng phần tử số Fibonacci">
+<button type="button" onclick="printFibo()">Check</button>
+<p id="result3"></p>
+
+<!--Bài 4-->
+<h3>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</h3>
+<button type="button" onclick="divine5()">Check</button>
+<p id="result4"></p>
+
+<!--Bài 5-->
+<h3>Bài 5: Tính tổng của n số đầu tiên trong dãy fibonacci.</h3>
+<input id="fibo-string" style="width: 260px" placeholder="Tổng của n số đầu tiên trong dãy fibonacci.">
+<button type="button" onclick="totalFibo()">Tính tổng</button>
+<p id="result5"></p>
+
+<!--Bài 6-->
+<h3>Bài 6: Tính tổng của n số chia hết cho 7 đầu tiên trong các số tự nhiên.</h3>
+<input id="inputNum" style="width: 260px" placeholder="Tổng của n số đầu tiên chia hết cho 7">
+<button type="button" onclick="total7()">Tính tổng</button>
+<p id="result6"></p>
+
+<!--Bài 7-->
+<h3>Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</h3>
+<button onclick="printNum()">Kích hoạt</button>
+
+<h3>Bài 8: Game đoán số</h3>
+<p>1. Thiết kế giao diện: Giao diện chỉ gồm 1 Button "Chơi": cho phép người dùng bắt đầu  chơi hoặc chơi lại
+
+    2. Mô tả ứng dụng: Khi người dùng nhấn vào button “Chơi”:
+
+    Ứng dụng hiển thị cửa sổ prompt cho phép người dùng nhập vào muốn đoán trong khoảng nào
+    Ứng dụng chọn ra số ngẫu nhiên trong khoảng mà ngườI dùng chọn
+    Ứng dụng hiển thị cửa số prompt cho người dùng nhập giá trị mà người dùng đoán
+    Ứng dụng lấy kết quả và so sánh với giá trị ngẫu nhiên.
+    Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi
+    Nếu lớn hơn hoặc bé thua thì hiển thị thông báo lớn hơn hay bé thua và cho phép người dùng lựa chọn lại.
+    Chú ý: Người dùng chỉ được lựa chọn tối đa ba lần</p>
+
+<form>
+    <button type="button" onclick="play()">Play</button>
+    <button type="reset">Restart</button>
+</form>
+
+
+<script src="Luyen-tap-vong-lap-p1.js"></script>
+</body>
+</html>

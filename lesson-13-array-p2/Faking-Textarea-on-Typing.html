@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea on Typing</title>
+</head>
+<style>
+ body {
+     text-align: center;
+ }
+</style>
+<body>
+<h3>Type Anything Slowly</h3>
+<textarea onkeydown="typeTextare()" id="text"></textarea>
+<script>
+    let string = "BẠN XẤU TRAI VL!"
+    let array = string.split("")
+    let text = ""
+    function typeTextare() {
+        let text1 = document.getElementById("text").value;
+        if (text1.length > 0) {
+            for (let i = 0; i < text1.length; i++) {
+                text += array[i];
+                if (i == string.length) {
+                    document.getElementById("text").value = "";
+                    text = "";
+                }
+
+            }
+        }
+        document.getElementById("text").value = text;
+        text = "";
+        setTimeout("typeTextare()",1000)
+    }
+
+</script>
+</body>
+</html>

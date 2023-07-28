@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả điện thoại</title>
+</head>
+<style>
+    div {
+        height: 300px;
+        width: 200px;
+        border: 2px solid black;
+        float: left;
+        margin: 20px;
+    }
+    h2 {
+        text-align: center;
+    }
+    button {
+        margin-left: 30px;
+        color: white;
+        background-color: #23181f;
+        border-radius: 8px;
+    }
+
+    button:hover {
+        background-color: crimson;
+    }
+    #iPhoneBattery, #nokiaBattery {
+        text-align: center;
+    }
+</style>
+<body>
+<div id="iPhone">
+<h2>iPhone</h2>
+    <h3 id="iPhoneBattery"></h3>
+    <button onclick="chargeIphone()">Charge Battery</button> <br><br>
+    <button onclick="sendFromIphone()">Send Message</button> <br><br>
+    <button onclick="receivedIphone()">Message</button>
+    <button onclick="sentIphone()">Sent</button> <br><br>
+    <button onclick="turnOnIphone()">TURN OFF</button> <br><br>
+    <button onclick="turnOffIphone()">TURN ON</button>
+</div>
+<div id="nokia">
+<h2>Nokia</h2>
+    <h3 id="nokiaBattery"></h3>
+    <button onclick="chargeNokia()">Charge Battery</button> <br><br>
+    <button onclick="sendFromNokia()">Send Message</button> <br><br>
+    <button onclick="receivedNokia()">Message</button>
+    <button onclick="sentNokia()">Sent</button><br><br>
+    <button onclick="turnOnNokia()">TURN OFF</button><br><br>
+    <button onclick="turnOffNokia()">TURN ON</button>
+</div>
+
+<script src="Xay-dung-lop-mo-ta-dien-thoai.js"></script>
+</body>
+</html>

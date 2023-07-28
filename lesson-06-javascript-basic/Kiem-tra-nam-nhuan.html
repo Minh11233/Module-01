@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra nam Nhuan</title>
+</head>
+<body>
+<script>
+  // let year = parseInt(prompt("Enter Year"));
+  // if (year % 4 == 0) {
+  //   if (year % 100 == 0) {
+  //     if (year % 400 == 0) {
+  //       alert("Đây là năm Nhuận");
+  //     }
+  //     else {
+  //       alert("Đây không phải là năm Nhuận");
+  //     }
+  //   }
+  //   else {
+  //     alert("Đây là năm Nhuận");
+  //   }
+  // }
+  // else {
+  //   alert("Đây không phải là năm Nhuận");
+  // }
+  let year = parseInt(prompt("Enter Year"));
+  let isLeapYear = false;
+
+  if (year % 4 == 0) {
+      if (year % 100 == 0) {
+          if (year % 400 == 0) {
+              isLeapYear = true;
+          }
+      }
+      else {isLeapYear = true;
+  }}
+
+  if (isLeapYear) {
+      alert("Đây là năm nhuận")
+  }
+  else {
+      alert("Đây k là năm nhuận")
+  }
+
+
+</script>
+</body>
+</html>

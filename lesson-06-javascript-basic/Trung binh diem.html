@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trung binh va tong diem cac mon</title>
+</head>
+<body>
+
+</body>
+<script>
+  let inputPhysics;
+  let inputChemistry;
+  let inputBiology;
+
+  inputPhysics = prompt("Nhap diem Vat ly");
+  inputChemistry = prompt("Nhap diem Hoa");
+  inputBiology = prompt("Nhap diem Sinh hoc");
+  let gradePhysics = parseInt(inputPhysics);
+  let gradeChemistry = parseInt(inputChemistry);
+  let gradeBiology  = parseInt(inputBiology);
+  let total = gradePhysics + gradeChemistry + gradeBiology;
+  let average = total/3
+  document.write("Diem tong:" + total)
+  document.write('<br/>')
+  document.write("Diem trung binh:" + average);
+
+
+</script>
+</html>

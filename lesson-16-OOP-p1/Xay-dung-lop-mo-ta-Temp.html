@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<input id="TempC" type="number">
+<button onclick="ChangeTemp()">Chuyển đổi nhiệt độ</button>
+<p id="result"></p>
+  <script>
+      function ChangeTemp() {
+          let inputTempC = +document.getElementById("TempC").value;
+          function Temp(tempC) {
+              this.tempC = tempC;
+              this.tempF = function () {
+                  return this.tempC*1.8+32
+              }
+              this.tempK = function () {
+                  return this.tempC+273.18
+              }
+          }
+
+          let changeTemp = new Temp(inputTempC)
+          let F = changeTemp.tempF()
+          let K = changeTemp.tempK()
+          console.log(K)
+          console.log(F)
+          document.getElementById("result").innerHTML = `Độ Fahrenheit: ${F} F<sup>o</sup>  <br>Độ Kelvin: ${K} K<sup>o</sup>`
+      }
+
+  </script>
+</body>
+</html>

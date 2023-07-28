@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+  let number = +prompt("Nhập số");
+  if (isPrimeNumber(number)) {
+      alert(`Số ${number} là số nguyên tố`)
+  } else {
+      alert(`Số ${number} không là số nguyên tố`)
+  }
+  function isPrimeNumber(num) {
+      if (num < 2) {
+          return 0;
+      } else {
+          for (let i = 2; i <= Math.sqrt(num); i++) {
+              if (num % i == 0)
+                  return 0;
+          }
+          return 1;
+      }
+  }
+  //   let result ="";
+  //   if (number < 2) {
+  //     result =`Số ${number} không phải là số nguyên tố`
+  //   } else {
+  //     for (let i = 2; i <= Math.sqrt(number); i++) {
+  //       if (number % i == 0) {
+  //         result =`Số ${number} không là số nguyên tố`
+  //           return result;
+  //       } else {
+  //           result =`Số ${number} là số nguyên tố`
+  //       }
+  //     } result =`Số ${number} là số nguyên tố`
+  //   }
+  //   return result
+  // }
+</script>
+</body>
+</html>

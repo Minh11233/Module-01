@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh nang cao</title>
+  <style>
+      form {
+          border: 1px solid black;
+          width: 300px;
+      }
+    button {
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+      color: black;
+      background-color: burlywood;
+    }
+    #calc {
+      width: 290px;
+      height: 50px;
+      color: #d61b06;
+    }
+  </style>
+</head>
+<body>
+<form action="">
+    <input id="calc" type="text">
+    <br>
+    <button type="button" value="1" onclick="inputValue(this.value)">1</button>
+    <button type="button" value="2" onclick="inputValue(this.value)">2</button>
+    <button type="button" value="3" onclick="inputValue(this.value)">3</button>
+    <button type="button" value="+" onclick="inputValue(this.value)">+</button>
+    <br>
+    <button type="button" value="4" onclick="inputValue(this.value)">4</button>
+    <button type="button" value="5" onclick="inputValue(this.value)">5</button>
+    <button type="button" value="6" onclick="inputValue(this.value)">6</button>
+    <button type="button" value="-" onclick="inputValue(this.value)">-</button>
+    <br>
+    <button type="button" value="7" onclick="inputValue(this.value)">7</button>
+    <button type="button" value="8" onclick="inputValue(this.value)">8</button>
+    <button type="button" value="9" onclick="inputValue(this.value)">9</button>
+    <button type="button" value="*" onclick="inputValue(this.value)">*</button>
+    <br>
+    <button type="reset">AC</button>
+    <button type="button" value="0" onclick="inputValue(this.value)">0</button>
+    <button type="button" onclick="result()">=</button>
+    <button type="button" value="/" onclick="inputValue(this.value)">/</button>
+</form>
+<script>
+let view = document.getElementById("calc")
+function inputValue(abc) {
+    view.value += abc;
+}
+function result() {
+    view.value = eval(view.value);
+}
+</script>
+</body>
+</html>

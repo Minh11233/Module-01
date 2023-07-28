@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>[Bài tập] Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<h3>[Bài tập] Hiển thị các số nguyên tố đầu tiên</h3>
+<input type="number" placeholder="Nhập số lượng số nguyên tố bạn muốn in ra" style="width: 300px">
+<button type="button">Print</button>
+<strong><p style="color: green"></p></strong>
+
+<script>
+  function isPrimeNumber (num) { //4
+    if (num < 2) {
+      return false;
+    } else if (num == 2) {
+      return true;
+    } else {
+      for (let i = 3; i < num; i+=2) { //12
+        if (num % i == 0) {
+          return false;
+          break;
+        }
+      }
+      return true;
+    }
+  }
+  function printPrime () {
+    let inputNumber = parseInt(document.querySelector("input").value);
+    let count = 1;
+    let print = `${inputNumber} số nguyên tố đầu tiên là: 2`;
+    let number = 3;
+    while (count < inputNumber) {
+      if (isPrimeNumber(number)) {
+        print += ", " +number;
+        count++;
+      }
+      number += 2;
+    }
+    document.querySelector("p").innerText = print;
+  }
+  document.querySelector("button").addEventListener("click", printPrime);
+</script>
+</body>
+</html>

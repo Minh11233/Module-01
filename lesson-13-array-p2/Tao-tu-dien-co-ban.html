@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TỪ ĐIỂN CƠ BẢN</title>
+</head>
+<body>
+<input id="text">
+<button onclick="trans()">Dịch</button>
+<p id="result"></p>
+<script>
+
+    function trans() {
+        let english = ["Bird","Bat","Eagle","Fox","Wolf","Tiger"]
+
+        let vietnamese = ["Chim","Dơi","Đại bàng","Cáo","Sói","Hổ"]
+        let inputText = document.getElementById("text").value;
+        let output = ""
+        let eng_position;
+
+        for (let i = 0; i < 6; i++) {
+            if (inputText == english[i]) {
+                eng_position = i;
+                for (let j = 0; j < 6; j++) {
+                    if (eng_position == j) {
+                        output = vietnamese[j];
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML = output;
+    }
+</script>
+
+</body>
+</html>
